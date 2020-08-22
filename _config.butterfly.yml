@@ -43,7 +43,7 @@ copy:
 #   图标 : 地址 || 说明
 # ---------------------------------------
 social:
-   fab fa-github: https://github.com/MMMMMMLi || Github
+   # fab fa-github: https://github.com/MMMMMMLi || Github
    fas fa-envelope: mailto:jiangwjia@163.com || Email
    fab fa-steam: https://steamcommunity.com/id/mengli || Steam
    fas fa-gamepad: http://dotamax.com/player/detail/158432419 || Dota2
@@ -227,42 +227,39 @@ addtoany:
     - email
     - copy_link
 
-# Comments System
+# 评论系统
+# TODO: 暂时先不实现了,后续慢慢搞以下.
+# https://demo.jerryc.me/posts/ceeb73f/#%E8%A9%95%E8%AB%96
 # --------------------------------------
-
 comments:
-  # Up to two comments system, the first will be shown as default
-  # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Utterances/Facebook Comments
+  # 使用的评论（请注意，填写的评论首字母需要大写。最多支持两个，如果不需要请留空）
+  # 选择: Disqus/Disqusjs/Livere/Gitalk/Valine/Utterances/Facebook Comments
+  # 只留下了一个gitalk和Valine 的评论设置,其余的都去掉了.
   use:
-  # - Valine
+   - Valine
   # - Disqus
-  text: true # Display the comment name next to the button
-  # lazyload: The comment system will be load when comment element enters the browser's viewport.
-  # If you set it to true, the comment count will be invalid
+  text: false # 是否显示评论服务商的名字
+  # 是否为评论开启 lazyload，开启后，只有滚动到评论位置时才会加载评论所需要的资源
+  # 开启 lazyload 后，评论数将不显示
   lazyload: false
-  count: false # Display comment count in top_img
+  count: true # 是否在文章顶部显示评论数 livere 和 utterances 不支持评论数显示
 
-# disqus
-# https://disqus.com/
-disqus:
-  shortname:
-
-# Alternative Disqus - Render comments with Disqus API
-# DisqusJS 評論系統，可以實現在網路審查地區載入 Disqus 評論列表，兼容原版
-# https://github.com/SukkaW/DisqusJS
-disqusjs:
-  shortname:
-  siteName:
-  apikey:
-  api:
-  nocomment: # display when a blog post or an article has no comment attached
-  admin:
-  adminLabel:
-
-# livere (來必力)
-# https://www.livere.com/
-livere:
-  uid:
+# valine
+# https://valine.js.org
+valine:
+  appId: UeAVqt5HTolST5BTyI4PdG42-gzGzoHsz
+  appKey: fL8WRyguRl9twVdY99aMvogG
+  pageSize: 10 # comment list page size
+  avatar: monsterid # gravatar style https://valine.js.org/#/avatar
+  lang: zh-CN # i18n: zh-CN/zh-TW/en/ja
+  placeholder: 记得留下你的昵称和邮箱幺，看到之后会在第一时间回复.... # valine comment input placeholder (like: Please leave your footprints)
+  guest_info: nick,mail,link # valine comment header info (nick/mail/link)
+  recordIP: false # 记录审核人IP
+  serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
+  bg: /image/index/4.jpg # valine background
+  emojiCDN: # emoji CDN
+  enableQQ: true # enable the Nickname box to automatically get QQ Nickname and QQ Avatar
+  requiredFields: nick,mail # required fields (nick/mail)
 
 # gitalk
 # https://github.com/gitalk/gitalk
@@ -278,41 +275,6 @@ gitalk:
   pagerDirection: last # Comment sorting direction, available values are last and first.
   createIssueManually: false # Gitalk will create a corresponding github issue for your every single page automatically
 
-# valine
-# https://valine.js.org
-valine:
-  appId: # leancloud application app id
-  appKey: # leancloud application app key
-  pageSize: 10 # comment list page size
-  avatar: monsterid # gravatar style https://valine.js.org/#/avatar
-  lang: en # i18n: zh-CN/zh-TW/en/ja
-  placeholder: Please leave your footprints # valine comment input placeholder (like: Please leave your footprints)
-  guest_info: nick,mail,link # valine comment header info (nick/mail/link)
-  recordIP: false # Record reviewer IP
-  serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
-  bg: # valine background
-  emojiCDN: # emoji CDN
-  enableQQ: false # enable the Nickname box to automatically get QQ Nickname and QQ Avatar
-  requiredFields: nick,mail # required fields (nick/mail)
-
-# utterances
-# https://utteranc.es/
-utterances:
-  repo:
-  # Issue Mapping: pathname/url/title/og:title
-  issue_term: pathname
-  # Theme: github-light/github-dark/github-dark-orange/icy-dark/dark-blue/photon-dark
-  light_theme: github-light
-  dark_theme: photon-dark
-
-# Facebook Comments Plugin
-# https://developers.facebook.com/docs/plugins/comments/
-facebook_comments:
-  app_id:
-  user_id: # optional
-  pageSize: 10 # The number of comments to show
-  order_by: social # social/time/reverse_time
-  lang: en_US # Language en_US/zh_CN/zh_TW and so on
 
 # Chat Services
 # --------------------------------------
@@ -583,14 +545,14 @@ aside:
   position: right # 侧边栏在左边还是右边
   # 头像下面的那个 button 按钮
   card_author:
+    enable: true
+    description:
     # 因为已经设置github的图标了，暂时关闭，后续有别的可以添加
     # TODO: 名字下面添加一个快捷按钮
-    enable: fasle
-    description:
     button:
       icon: fab fa-github
-      text: Follow Me
-      link: https://github.com/xxxxxx
+      text: My Github
+      link: https://github.com/MMMMMMLi
   # 公告栏
   card_announcement:
     enable: true
