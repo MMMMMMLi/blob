@@ -199,7 +199,7 @@ noticeOutdate:
   message_prev: It has been # 天数之前的文字
   message_next: days since the last update, the content of the article may be outdated. # 天数之后的文字
 
-# Share System (分享功能)
+# 分享功能
 # --------------------------------------
 
 # AddThis
@@ -275,46 +275,10 @@ gitalk:
   pagerDirection: last # Comment sorting direction, available values are last and first.
   createIssueManually: false # Gitalk will create a corresponding github issue for your every single page automatically
 
-
-# Chat Services
+# 聊天系统，暂时不用
 # --------------------------------------
-
-# Chat Button [recommend]
-# It will create a button in the bottom right corner of website, and hide the origin button
 chat_btn: false
-
-# The origin chat button is displayed when scrolling up, and the button is hidden when scrolling down
 chat_hide_show: false
-
-# chatra
-# https://chatra.io/
-chatra:
-  enable: false
-  id:
-
-# tidio
-# https://www.tidio.com/
-tidio:
-  enable: false
-  public_key:
-
-# daovoice
-# http://daovoice.io/
-daovoice:
-  enable: false
-  app_id:
-
-# gitter
-# https://gitter.im/
-gitter:
-  enable: false
-  room:
-
-# crisp
-# https://crisp.chat/en/
-crisp:
-  enable: false
-  website_id:
 
 # 底部信息展示
 # --------------------------------------
@@ -322,7 +286,7 @@ footer:
   owner:
     enable: true
     since: 2019
-  custom_text: 我跨过山，涉过水，见过万物复苏，周而复始，如今山是你，水也是你。
+  custom_text: 我跨过山，涉过水，见过万物复苏，周而复始。<br /> 如今山是你，水也是你。
   copyright: false # Copyright of theme and framework
   ICP: # TODO: 有域名之后添加备案信息
     enable: false
@@ -330,19 +294,20 @@ footer:
     text:
     icon: /img/icp.png
 
-# Analysis
+# 站点统计
+# TODO: 后续有域名之后升级
 # --------------------------------------
 
-# Baidu Analytics
+# Baidu Analytics https://tongji.baidu.com/web/welcome/login
 baidu_analytics:
 
 # Google Analytics
 google_analytics:
 
-# Tencent Analytics ID
+# Tencent Analytics ID https://ta.qq.com/:
 tencent_analytics:
 
-# Advertisement
+# 广告
 # --------------------------------------
 
 # Google Adsense (谷歌廣告)
@@ -354,12 +319,14 @@ google_adsense:
   enable_page_level_ads: true
 
 # Insert ads manually (手動插入廣告)
+# 主页文章 (每三篇文章出现广告) /aside 公告之后 / 文章页打赏之后。
 # ad:
 #   index:
 #   aside:
 #   post:
 
-# Verification (站長驗證)
+# 站长验证
+# TODO: 后续实现
 # --------------------------------------
 
 # Google Webmaster tools verification setting
