@@ -349,26 +349,26 @@ qihu_site_verification:
 # see https://webmaster.yandex.com/
 yandex_site_verification:
 
-# Beautify/Effect (美化/效果)
+# 整体美化效果
 # --------------------------------------
 
-# Theme color for customize
-# Notice: color value must in double quotes like "#000" or may cause error!
+# TODO: 有时间改一下整体配色
+# 颜色值必须被双引号包裹，就像 "#000" 而不是#000。否则将会在构建的时候报错！
+theme_color:
+  enable: true
+  main: "#FFFFFF"   # 主颜色
+  paginator: "#00c4b6"    # 分页标题的颜色
+  button_hover: "#FF7242"  # 按钮悬停的颜色
+  text_selection: "#00c4b6" # 文本选择的颜色
+  link_color: "#99a9bf"   # 超链接的颜色
+  meta_color: "#858585"   # 不知道...
+  hr_color: "#A4D8FA"   # 指向文章标题的颜色
+  code_foreground: "#F47466"  # 代码块前置颜色
+  code_background: "rgba(27, 31, 35, .05)"  # 代码块后置颜色
+  toc_color: "#00c4b6"  # 目录颜色
+  blockquote_padding_color: "#49b1f5" # 块引号填充颜色 ??
+  blockquote_background_color: "#49b1f5"  # 快引用后置颜色 ??
 
-# theme_color:
-#   enable: true
-#   main: "#49B1F5"
-#   paginator: "#00c4b6"
-#   button_hover: "#FF7242"
-#   text_selection: "#00c4b6"
-#   link_color: "#99a9bf"
-#   meta_color: "#858585"
-#   hr_color: "#A4D8FA"
-#   code_foreground: "#F47466"
-#   code_background: "rgba(27, 31, 35, .05)"
-#   toc_color: "#00c4b6"
-#   blockquote_padding_color: "#49b1f5"
-#   blockquote_background_color: "#49b1f5"
 
 # The top_img settings of home page
 # default: top img - full screen, site info - middle (默認top_img全屏，site_info在中間)
@@ -383,12 +383,13 @@ index_top_img_height:
 category_ui: # 留空或 index
 tag_ui: # 留空或 index
 
-# Website Background (設置網站背景)
-# can set it to color or image (可設置圖片 或者 顔色)
-# The formal of color: '#49B202'
-# The formal of image: url(http://xxxxxx.com/xxx.jpg)
-# White color will be shown as default
-background:
+# 设置网站背景
+# 可以设置 图片或者颜色
+# 颜色: '#49B202'
+# 图片: url(http://xxxxxx.com/xxx.jpg) // 网站是 https://yoursite.com/blog, 引用一张 img/xx.png 图片，则设置 background 为 `url (/blog/img/xx.png)
+# 默认:白色
+#background: '#49B202'
+background: url(/img/index/6.jpg)
 
 # Show the footer background image (same as top_img)
 footer_bg: false
