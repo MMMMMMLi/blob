@@ -356,7 +356,7 @@ yandex_site_verification:
 # 颜色值必须被双引号包裹，就像 "#000" 而不是#000。否则将会在构建的时候报错！
 theme_color:
   enable: true
-  main: "#FFFFFF"   # 主颜色
+  main: "#49B1F5"   # 主颜色
   paginator: "#00c4b6"    # 分页标题的颜色
   button_hover: "#FF7242"  # 按钮悬停的颜色
   text_selection: "#00c4b6" # 文本选择的颜色
@@ -370,11 +370,12 @@ theme_color:
   blockquote_background_color: "#49b1f5"  # 快引用后置颜色 ??
 
 
-# The top_img settings of home page
-# default: top img - full screen, site info - middle (默認top_img全屏，site_info在中間)
-# The position of site info, eg: 300px/300em/300rem/10% (主頁標題距離頂部距離)
+# 主页的顶部图像设置
+# default: top img - full screen, site info - middle (默认top_img全屏，site_info在中間)
+
+# 主页标题距离顶部距离  例如 300px/300em/300rem/10%
 index_site_info_top:
-# The height of top_img, eg: 300px/300em/300rem (主頁top_img高度)
+# 主页top_img高度 例如 300px/300em/300rem  不能使用百分比
 index_top_img_height:
 
 # The user interface setting of category and tag page (category和tag頁的UI設置)
@@ -391,8 +392,8 @@ tag_ui: # 留空或 index
 #background: '#49B202'
 background: url(/img/index/6.jpg)
 
-# Show the footer background image (same as top_img)
-footer_bg: false
+# footer是否显示图片背景(与top_img一致),当设置 false 时，将与主题色一致。
+footer_bg: true
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
 rightside-bottom:
