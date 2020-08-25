@@ -43,7 +43,7 @@ copy:
 #   图标 : 地址 || 说明
 # ---------------------------------------
 social:
-   # fab fa-github: https://github.com/MMMMMMLi || Github
+   fab fa-github: https://github.com/MMMMMMLi || Github
    fas fa-envelope: mailto:jiangwjia@163.com || Email
    fab fa-steam: https://steamcommunity.com/id/mengli || Steam
    fas fa-gamepad: http://dotamax.com/player/detail/158432419 || Dota2
@@ -98,9 +98,8 @@ tag_img:
 category_img:
 
 # 是否显示文章封面
-# TODO: 存在问题,后续解决
 cover:
-  index_enable: false
+  index_enable: true
   aside_enable: true  # 侧边启用
   archives_enable: true # 存档启用
   # 封面显示的位置
@@ -109,7 +108,37 @@ cover:
   # 当没有设置cover时，默认的封面显示
   default_cover:
     # 可以设置多个，随机获取
-    - https://wallhaven.cc/w/eyl1xr
+    - /img/index/1.jpg
+    - /img/index/2.jpg
+    - /img/index/3.png
+    - /img/index/4.jpg
+    - /img/index/5.png
+    - /img/index/6.jpg
+    - /img/index/7.png
+    - /img/index/8.jpg
+    - /img/index/wallhaven-2e73d6.jpg
+    - /img/index/wallhaven-2e7kdm.png
+    - /img/index/wallhaven-2em38y.jpg
+    - /img/index/wallhaven-2em7kx.jpg
+    - /img/index/wallhaven-3911w9.jpg
+    - /img/index/wallhaven-6kxmj6.jpg
+    - /img/index/wallhaven-96qop1.png
+    - /img/index/wallhaven-dg1xwj.jpg
+    - /img/index/wallhaven-dgzj9o.jpg
+    - /img/index/wallhaven-eyk3xo.png
+    - /img/index/wallhaven-eyk71r.png
+    - /img/index/wallhaven-g8r873.png
+    - /img/index/wallhaven-j52vyp.png
+    - /img/index/wallhaven-j5g2ry.png
+    - /img/index/wallhaven-j5g6ry.jpg
+    - /img/index/wallhaven-kwoyjm.png
+    - /img/index/wallhaven-lm6lr2.png
+    - /img/index/wallhaven-lml7w2.png
+    - /img/index/wallhaven-lmlyl2.png
+    - /img/index/wallhaven-q673jr.png
+    - /img/index/wallhaven-q67kd5.jpg
+    - /img/index/wallhaven-r28md1.jpg
+    - /img/index/wallhaven-x1wroo.jpg
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
@@ -135,9 +164,10 @@ post_meta:
     tags: true # 是否显示标签
     label: true # 显示描述性文字
 
-# wordcount (字數統計)
+# 字数统计
+# npm install hexo-wordcount --save
 wordcount:
-  enable: false
+  enable: true
   post_wordcount: true
   min2read: true
   total_wordcount: true
@@ -254,7 +284,7 @@ valine:
   pageSize: 10 # comment list page size
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
   lang: zh-CN # i18n: zh-CN/zh-TW/en/ja
-  placeholder: 记得留下你的昵称和邮箱幺，看到之后会在第一时间回复.... # valine comment input placeholder (like: Please leave your footprints)
+  placeholder: 记得留下你的昵称和邮箱幺，看到之后会在第一时间回复。 # valine comment input placeholder (like: Please leave your footprints)
   guest_info: nick,mail,link # valine comment header info (nick/mail/link)
   recordIP: false # 记录审核人IP
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
@@ -407,7 +437,7 @@ rightside-bottom:
 # 可设置每次刷新更换綵带，或者每次点击更换綵带
 # See: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: true
+  enable: false
   size: 150
   alpha: 0.6
   zIndex: -1
@@ -436,15 +466,16 @@ activate_power_mode:
   colorful: true # 冒光特效
   shake: false #  抖動特效
 
-# Mouse click effects: fireworks (鼠標點擊效果: 煙火特效)
+# 鼠标点击特效
+# 烟火
 fireworks:
   enable: false
   zIndex: 9999 # -1 or 9999
 
-# Mouse click effects: Heart symbol (鼠標點擊效果: 愛心)
-click_heart: false
+# 爱心
+click_heart: true
 
-# Mouse click effects: words (鼠標點擊效果: 文字)
+# 文字
 ClickShowText:
   enable: false
   text:
@@ -457,20 +488,20 @@ ClickShowText:
 # light (default) / dark
 display_mode: light
 
-# Beautify (美化頁面顯示)
+# 页面美化
 beautify:
-  enable: false
-  field: post # site/post
+  enable: true
+  field: post # site 在全站生效 /post  只在文章页生效
   title-prefix-icon: '\f0c1'
   title-prefix-icon-color: '#F47466'
 
-# Global font settings
-# Don't modify the following settings unless you know how they work (非必要不要修改)
+# 全局字体配置
+# 非必要不要修改
 font:
   font-family:
   code-font:
 
-# Font settings for the site title and site subtitle
+# Blog 标题字体
 # 左上角網站名字 主頁居中網站名字
 blog_title_font:
   font_link: https://fonts.googleapis.com/css?family=Titillium+Web&display=swap
@@ -482,28 +513,31 @@ hr_icon:
   icon: # the unicode value of Font Awesome icon, such as '\3423'
   icon-top:
 
-# the subtitle on homepage (主頁subtitle)
+# 网站副标题
 subtitle:
-  enable: false
-  # Typewriter Effect (打字效果)
+  enable: true
+  # 打字效果
   effect: true
-  # loop (循環打字)
-  loop: true
-  # source調用第三方服務
-  # source: false 關閉調用
-  # source: 1  調用搏天api的隨機語錄（簡體） https://api.btstu.cn/
-  # source: 2  調用一言網的一句話（簡體） https://hitokoto.cn/
-  # source: 3  調用一句網（簡體） http://yijuzhan.com/
-  # source: 4  調用今日詩詞（簡體） https://www.jinrishici.com/
-  # subtitle 會先顯示 source , 再顯示 sub 的內容
+  # 循环或者只打字一次
+  loop: false
+  # source调用第三方服务
+  # source: false 关闭调用
+  # source: 1  调用搏天api的随机语录（简体） https://api.btstu.cn/
+  # source: 2  调用一言网的一句话（简体） https://hitokoto.cn/
+  # source: 3  调用一句网（简体） http://yijuzhan.com/
+  # source: 4  调用今日诗词（简体） https://www.jinrishici.com/
+  # subtitle 会先显示 source , 再显示 sub 的内容
   source: false
-  # 如果有英文逗號' , ',請使用轉義字元 &#44;
-  # 如果有英文雙引號' " ',請使用轉義字元 &quot;
-  # 開頭不允許轉義字元，如需要，請把整個句子用雙引號包住
-  # 如果關閉打字效果，subtitle只會顯示sub的第一行文字
+  # 如果有英文逗号' , ',请使用转义字元 &#44;
+  # 如果有英文双引号' " ',请使用转义字元 &quot;
+  # 开头不允许转义字元，如需要，请把整个句子用双引号包住
+  # 例如 ”&quotNever put off till tomorrow what you can do today&quot"
+  # 如果关闭打字效果，subtitle只会显示sub的第一行文字
   sub:
+    # 首页显示的字
+    - 愿我所愿，终能实现。
 
-# Loading Animation (加載動畫)
+# 当进入网页时，因为加载速度的问题，可能会导致 top_img 图片出现断层显示，或者网页加载不全而出现等待时间，开启 preloader 后，会显示加载动画，等页面加载完，加载动画会消失。
 preloader: false
 
 # 侧边栏
@@ -527,7 +561,7 @@ aside:
       link: https://github.com/MMMMMMLi
   # 公告栏
   card_announcement:
-    enable: true
+    enable: false
     content: 感谢访问本站，如喜欢请关注。d=====(￣▽￣*)b
   # 最新的帖子，先关闭。
   card_recent_post:
@@ -563,7 +597,7 @@ busuanzi:
 # 格式: 月/日/年 时间 / 年/月/日 时间
 # TODO: 显示博客创建时间
 runtimeshow:
-  enable: false
+  enable: true
   publish_date: 6/7/2018 00:00:00
 
 # 右下角按钮
@@ -597,17 +631,17 @@ darkmode:
   # autoChangeMode: false 取消自动切换
   autoChangeMode: false
 
-# Lightbox (圖片大圖查看模式)
+# 图片查看方式
 # --------------------------------------
-# You can only choose one, or neither (只能選擇一個 或者 兩個都不選)
+# 二选一
 
 # medium-zoom
 # https://github.com/francoischalifour/medium-zoom
-medium_zoom: false
+medium_zoom: true
 
 # fancybox
 # http://fancyapps.com/fancybox/3/
-fancybox: true
+fancybox: false
 
 # 标签外挂
 # TODO: https://demo.jerryc.me/posts/4aa8abbe/#%E6%A8%99%E7%B1%A4%E5%A4%96%E6%8E%9B%EF%BC%88Tag-Plugins%EF%BC%89
@@ -657,13 +691,13 @@ aplayerInject:
   enable: false
   per_page: true
 
-# Snackbar (Toast Notification 彈窗)
+# Snackbar 弹窗
 # https://github.com/polonel/SnackBar
-# position 彈窗位置
-# 可選 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
 snackbar:
-  enable: false
-  position: bottom-left
+  enable: true
+  # position 彈窗位置
+  # 可選 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
+  position: bottom-right
   bg_light: '#49b1f5' # The background color of Toast Notification in light mode
   bg_dark: '#121212' # The background color of Toast Notification in dark mode
 
@@ -711,9 +745,10 @@ fragment_cache: true
 # Inject
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
+# 引入自定义的CSS或者JS
 inject:
   head:
-  # - <link rel="stylesheet" href="/xxx.css">
+  - <link rel="stylesheet" href="/css/mine.css">
   bottom:
     # - <script src="xxxx"></script>
 
