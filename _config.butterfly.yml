@@ -81,7 +81,8 @@ avatar:
   effect: false # 开启之后头像转圈
 
 # 主页的顶部图
-index_img: /img/index/6.jpg
+#index_img: /img/index/6.jpg
+index_img: /img/index/wallhaven-j5g6ry.jpg
 
 # 其他 page 页的顶部图可以在各自的 md 页面设置 front-matter 中的 top_img
 # 如果其他页面没有设置，则取这个默认图片
@@ -97,17 +98,18 @@ tag_img:
 category_img:
 
 # 是否显示文章封面
+# TODO: 存在问题,后续解决
 cover:
-  index_enable: true
-  aside_enable: true
-  archives_enable: true
+  index_enable: false
+  aside_enable: true  # 侧边启用
+  archives_enable: true # 存档启用
   # 封面显示的位置
   # left/right/both
   position: both
   # 当没有设置cover时，默认的封面显示
   default_cover:
     # 可以设置多个，随机获取
-    - https://cdn.jsdelivr.net/gh/zhaoyibo/resource@gh-pages/img/1596874105785.png
+    - https://wallhaven.cc/w/eyl1xr
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
@@ -356,7 +358,7 @@ yandex_site_verification:
 # 颜色值必须被双引号包裹，就像 "#000" 而不是#000。否则将会在构建的时候报错！
 theme_color:
   enable: true
-  main: "#49B1F5"   # 主颜色
+  main: "#DCDCDC"   # 主颜色
   paginator: "#00c4b6"    # 分页标题的颜色
   button_hover: "#FF7242"  # 按钮悬停的颜色
   text_selection: "#00c4b6" # 文本选择的颜色
@@ -390,7 +392,7 @@ tag_ui: # 留空或 index
 # 图片: url(http://xxxxxx.com/xxx.jpg) // 网站是 https://yoursite.com/blog, 引用一张 img/xx.png 图片，则设置 background 为 `url (/blog/img/xx.png)
 # 默认:白色
 #background: '#49B202'
-background: url(/img/index/6.jpg)
+#background: url(/img/index/wallhaven-lml7w2.png)
 
 # footer是否显示图片背景(与top_img一致),当设置 false 时，将与主题色一致。
 footer_bg: true
@@ -398,25 +400,26 @@ footer_bg: true
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
 rightside-bottom:
 
-# Background effects (背景特效)
+# 背景特效
 # --------------------------------------
 
-# canvas_ribbon (靜止彩帶背景)
+# 静态彩带背景
+# 可设置每次刷新更换綵带，或者每次点击更换綵带
 # See: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: false
+  enable: true
   size: 150
   alpha: 0.6
   zIndex: -1
-  click_to_change: false
-  mobile: false
+  click_to_change: true # 点击变化
+  mobile: true  # 手机端
 
-# Dynamic ribbon (動態彩帶)
+# 动态彩带
 canvas_ribbon_piao:
   enable: false
   mobile: false
 
-# canvas_nest
+# 这个是鼠标显示方块啥的
 # https://github.com/hustcc/canvas-nest.js
 canvas_nest:
   enable: false
@@ -424,14 +427,14 @@ canvas_nest:
   opacity: 0.7 # the opacity of line (0~1), default: 0.5.
   zIndex: -1 # z-index property of the background, default: -1.
   count: 99 # the number of lines, default: 99.
-  mobile: false
+  mobile: true
 
-# Typewriter Effect (打字效果)
+# 打字效果
 # https://github.com/disjukr/activate-power-mode
 activate_power_mode:
-  enable: false
-  colorful: true # open particle animation (冒光特效)
-  shake: true #  open shake (抖動特效)
+  enable: true
+  colorful: true # 冒光特效
+  shake: false #  抖動特效
 
 # Mouse click effects: fireworks (鼠標點擊效果: 煙火特效)
 fireworks:
