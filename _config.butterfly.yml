@@ -83,6 +83,7 @@ avatar:
 # 主页的顶部图
 #index_img: /img/index/6.jpg
 index_img: /img/index/wallhaven-j5g6ry.jpg
+#index_img: /img/index/wallhaven-x1wroo.jpg
 
 # 其他 page 页的顶部图可以在各自的 md 页面设置 front-matter 中的 top_img
 # 如果其他页面没有设置，则取这个默认图片
@@ -388,7 +389,7 @@ yandex_site_verification:
 # 颜色值必须被双引号包裹，就像 "#000" 而不是#000。否则将会在构建的时候报错！
 theme_color:
   enable: true
-  main: "#DCDCDC"   # 主颜色
+  main: "#72CFF7"   # 主颜色
   paginator: "#00c4b6"    # 分页标题的颜色
   button_hover: "#FF7242"  # 按钮悬停的颜色
   text_selection: "#00c4b6" # 文本选择的颜色
@@ -421,11 +422,11 @@ tag_ui: # 留空或 index
 # 颜色: '#49B202'
 # 图片: url(http://xxxxxx.com/xxx.jpg) // 网站是 https://yoursite.com/blog, 引用一张 img/xx.png 图片，则设置 background 为 `url (/blog/img/xx.png)
 # 默认:白色
-#background: '#49B202'
+background: '#49B202'
 #background: url(/img/index/wallhaven-lml7w2.png)
 
 # footer是否显示图片背景(与top_img一致),当设置 false 时，将与主题色一致。
-footer_bg: true
+footer_bg: false
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
 rightside-bottom:
@@ -437,7 +438,7 @@ rightside-bottom:
 # 可设置每次刷新更换綵带，或者每次点击更换綵带
 # See: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: false
+  enable: true
   size: 150
   alpha: 0.6
   zIndex: -1

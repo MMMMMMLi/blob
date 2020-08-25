@@ -18,30 +18,47 @@
 /* 设置背景为渐变色 */
 #web_bg {
   /* webkit内核 5.1 - 6.0 */
-  background: -webkit-linear-gradient(left, red, blue);
+  background: -webkit-linear-gradient(left, #FDEDF1, #DEF7F0);
   /* Opera 11.1 - 12.0 */
-  background: -o-linear-gradient(right, red, blue);
+  background: -o-linear-gradient(right, #FDEDF1, #DEF7F0);
   /* Firefox 3.6 - 15 */
-  background: -moz-linear-gradient(right, red, blue);
+  background: -moz-linear-gradient(right, #FDEDF1, #DEF7F0);
   /* 标准的语法 */
-  background: linear-gradient(to right, red, blue);
+  background: linear-gradient(to right, #FDEDF1, #DEF7F0);
 }
 
-/* 文章页背景 */
+#footer {
+  /* webkit内核 5.1 - 6.0 */
+  background: -webkit-linear-gradient(left, #FDEDF1, #DEF7F0);
+  /* Opera 11.1 - 12.0 */
+  background: -o-linear-gradient(right, #FDEDF1, #DEF7F0);
+  /* Firefox 3.6 - 15 */
+  background: -moz-linear-gradient(right, #FDEDF1, #DEF7F0);
+  /* 标准的语法 */
+  background: linear-gradient(to right, #FDEDF1, #DEF7F0);
+}
+
+#footer-wrap {
+  position: relative;
+  padding: 2rem 1rem;
+  color: #858585;
+  text-align: center;
+}
+
+/* 文章页背景
 .layout_post>#post {
-  /* 以下代表白色透明度为0.3 */
-  background: rgba(255,255,255,.3);
-}
-
-/* 所有背景（包括首页卡片、文章页、页面页等）
-#aside_content .card-widget, #recent-posts>.recent-post-item, .layout_page>div:first-child:not(.recent-posts), .layout_post>#page, .layout_post>#post, .read-mode .layout_post>#post{
-  以下代表白色透明度为0.3
   background: rgba(255,255,255,.3);
 }
 */
 
+/* 所有背景（包括首页卡片、文章页、页面页等）*/
+#aside_content .card-widget, #recent-posts>.recent-post-item, .layout_page>div:first-child:not(.recent-posts), .layout_post>#page, .layout_post>#post, .read-mode .layout_post>#post{
+  background: rgba(255,255,255,.2);
+}
 
-/* 滚动条
+
+
+/* 滚动条*/
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -53,7 +70,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #49b1f5;
+  background-color: #72CFF7;
   background-image: -webkit-linear-gradient(
           45deg,
           rgba(255, 255, 255, 0.4) 25%,
@@ -73,6 +90,5 @@
 
 ::-moz-selection {
   color: #fff;
-  background-color: #49b1f5;
+  background-color: #72CFF7;
 }
-*/
