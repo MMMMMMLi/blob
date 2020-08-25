@@ -8,6 +8,10 @@
 }
 
 /* 隐藏首页博客名字 */
+.pull-left {
+  display: none;
+}
+
 #page-header #site_title {
   display: none;
   margin: 0;

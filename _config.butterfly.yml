@@ -19,7 +19,6 @@ menu:
     # TODO: 添加一个相册,操作方法 https://demo.jerryc.me/posts/4aa8abbe/#Gallery%E7%9B%B8%E5%86%8A%E5%9C%96%E5%BA%AB
     - 照片 || /Gallery/ || fas fa-images
     - 电影 || /movies/ || fas fa-video
-  友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
 
 # 代码块设置
@@ -438,7 +437,7 @@ rightside-bottom:
 # 可设置每次刷新更换綵带，或者每次点击更换綵带
 # See: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: true
+  enable: false
   size: 150
   alpha: 0.6
   zIndex: -1
@@ -599,7 +598,7 @@ busuanzi:
 # TODO: 显示博客创建时间
 runtimeshow:
   enable: true
-  publish_date: 6/7/2018 00:00:00
+  publish_date: 8/20/2020 00:00:00
 
 # 右下角按钮
 # --------------------------------------
