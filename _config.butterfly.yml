@@ -19,6 +19,7 @@ menu:
     # TODO: 添加一个相册,操作方法 https://demo.jerryc.me/posts/4aa8abbe/#Gallery%E7%9B%B8%E5%86%8A%E5%9C%96%E5%BA%AB
     - 照片 || /Gallery/ || fas fa-images
     - 电影 || /movies/ || fas fa-video
+  友情链接: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
 
 # 代码块设置
@@ -505,7 +506,7 @@ subtitle:
   # 如果关闭打字效果，subtitle只会显示sub的第一行文字
   sub:
     # 首页显示的字
-    - 愿我所愿，终能实现。
+    - 愿我所愿，终能实现
 
 # 当进入网页时，因为加载速度的问题，可能会导致 top_img 图片出现断层显示，或者网页加载不全而出现等待时间，开启 preloader 后，会显示加载动画，等页面加载完，加载动画会消失。
 preloader: false
@@ -720,7 +721,7 @@ inject:
   head:
   - <link rel="stylesheet" href="/css/mine.css">
   bottom:
-    # - <script src="xxxx"></script>
+  - <script src="/js/mine.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work

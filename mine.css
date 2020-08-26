@@ -1,23 +1,39 @@
 /* 头像框下面的按钮，隐藏掉 */
 #aside_content .card-info #card-info-btn {
   display: none;
-  background-color: var(--btn-bg);
-  color: var(--btn-color);
-  text-align: center;
-  line-height: 1.6rem;
 }
+/*-----------------------------------------------------*/
 
 /* 隐藏首页博客名字 */
 .pull-left {
   display: none;
 }
-
+/* 右上角的博客名 */
 #page-header #site_title {
   display: none;
-  margin: 0;
-  color: var(--white);
-  font-size: 1.3rem;
 }
+/* 后续如果不隐藏的时候，可以使用下面俩参数改一下颜色 */
+/* 首页中间打字效果上方 */
+#page-header #site_title {
+  color: #80bdab;
+}
+/* 顶部导航栏 */
+#nav a {
+  color: #f9f2f4;
+}
+/*-----------------------------------------------------*/
+
+/* 版权链接去掉下划线 */
+.layout_post .post-copyright .post-copyright-info a {
+  text-decoration: none;
+}
+/*-----------------------------------------------------*/
+
+/* 博主昵称颜色 */
+.author-info__name {
+  color: #ff7242;
+}
+/*-----------------------------------------------------*/
 
 /* 设置背景为渐变色 */
 #web_bg {
@@ -30,7 +46,7 @@
   /* 标准的语法 */
   background: linear-gradient(to right, #FDEDF1, #DEF7F0);
 }
-
+/* 底部背景渐变色 */
 #footer {
   /* webkit内核 5.1 - 6.0 */
   background: -webkit-linear-gradient(left, #FDEDF1, #DEF7F0);
@@ -41,26 +57,20 @@
   /* 标准的语法 */
   background: linear-gradient(to right, #FDEDF1, #DEF7F0);
 }
-
+/* 底部说明的颜色 */
 #footer-wrap {
   position: relative;
   padding: 2rem 1rem;
   color: #858585;
   text-align: center;
 }
-
-/* 文章页背景
-.layout_post>#post {
-  background: rgba(255,255,255,.3);
-}
-*/
+/*-----------------------------------------------------*/
 
 /* 所有背景（包括首页卡片、文章页、页面页等）*/
 #aside_content .card-widget, #recent-posts>.recent-post-item, .layout_page>div:first-child:not(.recent-posts), .layout_post>#page, .layout_post>#post, .read-mode .layout_post>#post{
   background: rgba(255,255,255,.2);
 }
-
-
+/*-----------------------------------------------------*/
 
 /* 滚动条*/
 ::-webkit-scrollbar {
@@ -96,3 +106,72 @@
   color: #fff;
   background-color: #72CFF7;
 }
+/*-----------------------------------------------------*/
+
+/* 评论框  */
+.vwrap {
+  box-shadow: 2px 2px 5px #bbb;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 30px;
+  margin: 30px 0px 30px 0px;
+}
+/* 提交按钮 */
+#vcomment button {
+  padding: 0.3rem 0.8rem;
+  border-color: #fff;
+  background-color: #e58a8a;
+  color: #fff;
+  font-size: 0.7rem;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* 评论区代码块 */
+.v[data-class=v] code {
+  color: #c7254e;
+  background-color: #F9F2F4;
+}
+/* 设置评论框 */
+.vcard {
+  box-shadow: 2px 2px 5px #bbb;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 30px;
+  margin: 30px 0px 0px 0px;
+}
+/* 取消回复聊天框 */
+.vquote .vcard {
+  box-shadow: 2px 2px 5px transparent;
+  background: rgba(255, 255, 255, 0.0);
+  padding: 0px;
+}
+/*-----------------------------------------------------*/
+
+/* a标签默认颜色 */
+#article-container a {
+  color: #00c4b6;
+  text-decoration: none;
+}
+/* 鼠标悬停时的颜色 */
+#article-container a:hover {
+  color: #e58a8a;
+  text-decoration: none;
+}
+/*a标签颜色*/
+a {
+  color: #00c4b6;
+}
+/*-----------------------------------------------------*/
+
+/*移动端优化：去除归档、标签、最新文章、公告、、只保留网站统计*/
+@media screen and (max-width: 800px) {
+  #aside_content div:not(:last-child) {
+    display: none;
+    font-size: 13px;
+  }
+}
+/*-----------------------------------------------------*/
+
