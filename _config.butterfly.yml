@@ -11,7 +11,7 @@ menu:
   # Link: /link/ || fas fa-link
   # About: /about/ || fas fa-heart
   首页: / || fas fa-home
-  时间轴: /archives/ || fas fa-archive
+  归档: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
   清单||fa fa-heartbeat:
@@ -72,24 +72,22 @@ local_search:
 # --------------------------------------
 
 # 网站图标
-favicon: /img/favicon.png
+favicon: /img/blob/favicon.png
 
 # 头像
 avatar:
-  img: /img/avatar.jpeg
+  img: /img/blob/hua.png
   effect: false # 开启之后头像转圈
 
 # 主页的顶部图
-#index_img: /img/index/6.jpg
-index_img: /img/index/wallhaven-j5g6ry.jpg
-#index_img: /img/index/wallhaven-x1wroo.jpg
+index_img: /img/blob/index.jpg
 
 # 其他 page 页的顶部图可以在各自的 md 页面设置 front-matter 中的 top_img
 # 如果其他页面没有设置，则取这个默认图片
-default_top_img: /img/index/6.jpg
+default_top_img: /img/blob/default_top.png
 
 # archives/归档页面 的顶部图
-archive_img: /img/index/8.jpg
+archive_img:
 
 #  tag 的顶部图
 tag_img:
@@ -109,38 +107,8 @@ cover:
   default_cover:
     # 可以设置多个，随机获取
     - /img/index/1.jpg
-    - /img/index/2.jpg
-    - /img/index/3.png
-    - /img/index/4.jpg
-    - /img/index/5.png
-    - /img/index/6.jpg
-    - /img/index/7.png
-    - /img/index/8.jpg
-    - /img/index/wallhaven-2e73d6.jpg
-    - /img/index/wallhaven-2e7kdm.png
-    - /img/index/wallhaven-2em38y.jpg
-    - /img/index/wallhaven-2em7kx.jpg
-    - /img/index/wallhaven-3911w9.jpg
-    - /img/index/wallhaven-6kxmj6.jpg
-    - /img/index/wallhaven-96qop1.png
-    - /img/index/wallhaven-dg1xwj.jpg
-    - /img/index/wallhaven-dgzj9o.jpg
-    - /img/index/wallhaven-eyk3xo.png
-    - /img/index/wallhaven-eyk71r.png
-    - /img/index/wallhaven-g8r873.png
-    - /img/index/wallhaven-j52vyp.png
-    - /img/index/wallhaven-j5g2ry.png
-    - /img/index/wallhaven-j5g6ry.jpg
-    - /img/index/wallhaven-kwoyjm.png
-    - /img/index/wallhaven-lm6lr2.png
-    - /img/index/wallhaven-lml7w2.png
-    - /img/index/wallhaven-lmlyl2.png
-    - /img/index/wallhaven-q673jr.png
-    - /img/index/wallhaven-q67kd5.jpg
-    - /img/index/wallhaven-r28md1.jpg
-    - /img/index/wallhaven-x1wroo.jpg
 
-# Replace Broken Images (替換無法顯示的圖片)
+# 无法展示的图片，默认显示
 error_img:
   flink: /img/friend_404.gif
   post_page: /img/404.jpg
@@ -178,7 +146,7 @@ wordcount:
 # 3: auto_excerpt: 只显示自动节选
 # 此处所说的 {description} 是在写文章里面声明的。
 index_post_content:
-  method: 3
+  method: 2
   length: 500 # 如果选择2或者3，则需要配置自动节选的长度。
 
 # Post
@@ -198,16 +166,16 @@ post_copyright:
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 # 打赏按钮
-# TODO: 打赏按钮
+# TODO: 图片完善之后，开启。
 reward:
   enable: false
   QR_code:
-    # - img: /img/wechat.jpg
-    #   link:
-    #   text: wechat
-    # - img: /img/alipay.jpg
-    #   link:
-    #   text: alipay
+    - img: /img/reward/wechat.jpg
+      link:
+      text: 微信
+    - img: /img/reward/alipay.jpg
+      link:
+      text: 支付宝
 
 # 相关文章推荐
 related_post:
@@ -260,7 +228,7 @@ addtoany:
     - copy_link
 
 # 评论系统
-# TODO: 暂时先不实现了,后续慢慢搞以下.
+# TODO: 暂时先简单实现,后续慢慢搞以下.
 # https://demo.jerryc.me/posts/ceeb73f/#%E8%A9%95%E8%AB%96
 # --------------------------------------
 comments:
@@ -371,7 +339,7 @@ bing_site_verification:
 
 # Baidu Webmaster tools verification setting
 # See: https://ziyuan.baidu.com/site/
-baidu_site_verification:
+baidu_site_verification: 0oYRrZXnyd
 
 # 360 Webmaster tools verification setting
 # see http://zhanzhang.so.com/
@@ -384,7 +352,6 @@ yandex_site_verification:
 # 整体美化效果
 # --------------------------------------
 
-# TODO: 有时间改一下整体配色
 # 颜色值必须被双引号包裹，就像 "#000" 而不是#000。否则将会在构建的时候报错！
 theme_color:
   enable: true
@@ -410,7 +377,7 @@ index_site_info_top:
 # 主页top_img高度 例如 300px/300em/300rem  不能使用百分比
 index_top_img_height:
 
-# The user interface setting of category and tag page (category和tag頁的UI設置)
+# category和tag頁的UI設置
 # index - same as Homepage UI (index 值代表 UI將與首頁的UI一樣)
 # default - same as archives UI 默認跟archives頁面UI一樣
 category_ui: # 留空或 index
@@ -421,9 +388,12 @@ tag_ui: # 留空或 index
 # 颜色: '#49B202'
 # 图片: url(http://xxxxxx.com/xxx.jpg) // 网站是 https://yoursite.com/blog, 引用一张 img/xx.png 图片，则设置 background 为 `url (/blog/img/xx.png)
 # 默认:白色
+
+# TODO: 此处设置的是渐变背景色，具体代码详情见: themes/butterfly/source/css/mine.css
 background: '#49B202'
 #background: url(/img/index/wallhaven-lml7w2.png)
 
+# TODO: 此处设置的是渐变背景色，具体代码详情见: themes/butterfly/source/css/mine.css
 # footer是否显示图片背景(与top_img一致),当设置 false 时，将与主题色一致。
 footer_bg: false
 
@@ -446,8 +416,8 @@ canvas_ribbon:
 
 # 动态彩带
 canvas_ribbon_piao:
-  enable: false
-  mobile: false
+  enable: true
+  mobile: true
 
 # 这个是鼠标显示方块啥的
 # https://github.com/hustcc/canvas-nest.js
@@ -466,6 +436,7 @@ activate_power_mode:
   colorful: true # 冒光特效
   shake: false #  抖動特效
 
+# TODO: 鼠标点击特效全部关闭了。
 # 鼠标点击特效
 # 烟火
 fireworks:
@@ -473,7 +444,7 @@ fireworks:
   zIndex: 9999 # -1 or 9999
 
 # 爱心
-click_heart: true
+click_heart: false
 
 # 文字
 ClickShowText:
@@ -484,8 +455,7 @@ ClickShowText:
     - YOU
   fontSize: 15px
 
-# Default display mode (網站默認的顯示模式)
-# light (default) / dark
+# 网站默认展示的样式
 display_mode: light
 
 # 页面美化
@@ -519,7 +489,7 @@ subtitle:
   # 打字效果
   effect: true
   # 循环或者只打字一次
-  loop: false
+  loop: true
   # source调用第三方服务
   # source: false 关闭调用
   # source: 1  调用搏天api的随机语录（简体） https://api.btstu.cn/
@@ -554,7 +524,7 @@ aside:
     enable: true
     description:
     # 因为已经设置github的图标了，暂时关闭，后续有别的可以添加
-    # TODO: 名字下面添加一个快捷按钮
+    # TODO: 此处设置为了隐藏，具体代码详情见: themes/butterfly/source/css/mine.css
     button:
       icon: fab fa-github
       text: My Github
@@ -568,7 +538,7 @@ aside:
     enable: false
     limit: 5 # 显示条数，如果设置0则显示全部
     sort: date # 排序方法
-  # 不知道是啥。。
+  # 分类
   card_categories:
     enable: true
     limit: 8 # 显示条数，如果设置0则显示全部
@@ -702,7 +672,7 @@ snackbar:
   bg_dark: '#121212' # The background color of Toast Notification in dark mode
 
 # Baidu Push (百度推送)
-baidu_push: false
+baidu_push: true
 
 # https://instant.page/
 # prefetch (預加載)
