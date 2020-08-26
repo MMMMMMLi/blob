@@ -13,7 +13,9 @@ email: 1061982601@qq.com
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://imengli.com
 root: /
-permalink: :year/:month/:day/:title/
+#permalink: :year/:month/:day/:title/article/:abbrlink.html
+# 使用这个方法需要安装一个插件：npm install hexo-abbrlink --save
+permalink: article/:abbrlink.html
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks

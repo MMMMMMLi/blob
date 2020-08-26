@@ -157,7 +157,7 @@ index_post_content:
 toc:
   enable: true
   number: true
-  auto_open: true # 进入文章页面时，是否自动打开 sidebar 显示 TOC
+  auto_open: false # 进入文章页面时，是否自动打开 sidebar 显示 TOC
 
 # 文章版权信息
 post_copyright:
@@ -185,7 +185,7 @@ related_post:
   date_type: created # 文章日期显示创建日或者更新日
 
 # 是否开启图片 Figcaption 描述文字显示
-photofigcaption: true
+photofigcaption: false
 
 # 文章锚点
 # 文章链接会根据标题 ID 进行替换
