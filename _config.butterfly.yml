@@ -89,13 +89,13 @@ index_img: /img/blob/index.jpg
 default_top_img: /img/blob/default_top.png
 
 # archives/归档页面 的顶部图
-archive_img:
+archive_img: /img/blob/archives.jpg
 
 #  tag 的顶部图
-tag_img:
+tag_img: /img/blob/tags.jpg
 
 # the banner image of category page
-category_img:
+category_img: /img/blob/tags.jpg
 
 # 是否显示文章封面
 cover:

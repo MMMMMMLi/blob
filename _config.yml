@@ -93,30 +93,45 @@ include:
 exclude:
 ignore:
 
+# --------------------------------------------------
+
+# 下面俩都是Md的渲染插件,第一个选软速度快,但是会将渲染不出{},问题未知,等着后面测试一下
+# 第二个是的速度慢点,但是现在还没有发现什么问题.
+
 #npm un hexo-renderer-marked --save
 #npm i hexo-renderer-markdown-it --save
 #npm install markdown-it-emoji --save
 # markdown 渲染引擎配置，默认是hexo-renderer-marked，这个插件渲染速度更快，且有新特性
-markdown:
-  render:
-    html: true
-    xhtmlOut: false
-    breaks: true
-    linkify: true
-    typographer: true
-    quotes: '“”‘’'
-  plugins:
-    - markdown-it-footnote
-    - markdown-it-sup
-    - markdown-it-sub
-    - markdown-it-abbr
-    - markdown-it-emoji
-  anchors:
-    level: 2
-    collisionSuffix: 'v'
-    permalink: true
-    permalinkClass: header-anchor
-    permalinkSymbol: ¶
+#markdown:
+#  render:
+#    html: true
+#    xhtmlOut: false
+#    breaks: true
+#    linkify: true
+#    typographer: true
+#    quotes: '“”‘’'
+#  plugins:
+#    - markdown-it-footnote
+#    - markdown-it-sup
+#    - markdown-it-sub
+#    - markdown-it-abbr
+#    - markdown-it-emoji
+#  anchors:
+#    level: 2
+#    collisionSuffix: 'v'
+#    permalink: true
+#    permalinkClass: header-anchor
+#    permalinkSymbol: ¶
+
+
+# npm un hexo-renderer-markdown-it --save
+# npm un hexo-renderer-marked --save
+# npm i hexo-lute --save
+lute:
+  emoji: true # Disabled by default
+
+# --------------------------------------------------
+
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
