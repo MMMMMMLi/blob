@@ -4,7 +4,7 @@ title: ❤ MengLi #博客标题
 subtitle: 记录成长与爱 ❤ #博客副标题
 description: 一个热爱技术却很菜的大龄程序员，记录今后的每一点点进步和生活。 #博客的描述
 keywords: mengli,java,blob,
-author: MengLi ❤ #你的名字
+author: MengLi #你的名字
 language: zh-CN #网站使用的语言，使用 ISO-639-1，默认 en （这个选项貌似跟主题是否国际化了有关）
 timezone: Asia/Shanghai #网站时区 像 America/New_York, Japan, UTC 这种
 email: 1061982601@qq.com
