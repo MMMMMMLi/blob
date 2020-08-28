@@ -201,6 +201,18 @@ noticeOutdate:
   message_prev: It has been # 天数之前的文字
   message_next: days since the last update, the content of the article may be outdated. # 天数之后的文字
 
+# 文章指定设置
+# 要为文章置顶，你需要安装插件 (hexo-generator-index-pin-top 或者 hexo-generator-indexed)
+
+# 如果使用 hexo-generator-index-pin-top, 需要先卸载掉 hexo-generator-index，然后在文章的 front-matter 区域里添加 top: true 属性来把这篇文章置顶
+
+# 如果使用 hexo-generator-indexed, 需要先卸载掉 hexo-generator-index，然后在文章的 front-matter 区域里添加 sticky: 1 属性来把这篇文章置顶。数值越大，置顶的优先级越大
+
+# 当前使用的是第二种,因为可以自定义置顶的文章是哪个.
+# npm un hexo-generator-index --save
+# npm i hexo-generator-indexed --save
+# 文章配置里面添加: sticky: 1
+
 # 分享功能
 # --------------------------------------
 
