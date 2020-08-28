@@ -133,8 +133,13 @@ a {
 }
 /*-----------------------------------------------------*/
 
-/* 隐藏掉右下角 回到顶部 的背景色 */
+/* 隐藏掉右下角 回到顶部 的背景色
 #go-up {
   display: none;
   background-color: transparent !important;
+}
+*/
+/* 修改右下角的那些按钮边框为圆形 */
+#rightside div button,a {
+  border-radius: 15px;
 }
