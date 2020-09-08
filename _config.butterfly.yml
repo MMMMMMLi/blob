@@ -303,9 +303,9 @@ footer:
   custom_text: 我跨过山，涉过水，见过万物复苏，周而复始。<br /> 如今山是你，水也是你。
   copyright: false # Copyright of theme and framework
   ICP: # TODO: 有域名之后添加备案信息
-    enable: false
-    url:
-    text:
+    enable: true
+    url: http://beian.miit.gov.cn/
+    text: 鲁ICP备2020035855号
     icon: /img/icp.png
 
 # 站点统计
