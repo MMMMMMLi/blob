@@ -5,18 +5,14 @@
 /*-----------------------------------------------------*/
 
 /* 隐藏首页博客名字 */
-#blog_name {
+#site-name {
   display: none;
 }
-/* 右上角的博客名 */
-#page-header #site_title {
+
+#site-title {
   display: none;
 }
-/* 后续如果不隐藏的时候，可以使用下面俩参数改一下颜色 */
-/* 首页中间打字效果上方 */
-#page-header #site_title {
-  color: #80bdab;
-}
+
 /* 顶部导航栏 */
 #nav a {
   color: #f9f2f4;

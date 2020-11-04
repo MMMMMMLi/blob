@@ -140,7 +140,7 @@ theme: butterfly #当前主题名称
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy: #部署
-  type: git
-  repo: https://github.com/Weijia-Jiang/Weijia-Jiang.github.io #库（Repository）地址
-  branch: master #分支名称
+#deploy: #部署
+#  type: git
+#  repo: https://github.com/Weijia-Jiang/Weijia-Jiang.github.io #库（Repository）地址
+#  branch: master #分支名称
