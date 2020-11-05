@@ -49,7 +49,7 @@ qipao();
 
 console.log("%c   ", "padding:50px 300px;line-height:180px;background:url('https://imengli.com/img/post/smile.gif') no-repeat;");
 console.log("%c\n\n\n           折腾不息 · 欢乐不止 ·  \n\n\n    这个博客主要是用来记录自己生活的点点滴滴以及慢慢成长的过程。\n\n\n",'color:DeepSkyBlue;')
-console.log('%c\n\n\n你是最帅最漂亮的访客吆  \n\n\n                                 ε=ε=ε=(~￣▽￣)~\n\n\n','color:LightPink;');
+console.log('%c\n\n\n\n\n\n                                 ε=ε=ε=(~￣▽￣)~\n\n\n','color:LightPink;');
 
 /* 添加图片top */
 /* var top_up = "<img id='upj' class='upj' style='max-width: 1000%; transform: translate(-70px,-70px);' src='https://cdn.jsdelivr.net/gh/lete114/CDN/Use/up.gif' title='回到顶部' >";*/
